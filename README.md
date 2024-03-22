@@ -39,6 +39,7 @@ Borrow out = A'Bin + A'B + BBin
 **Truthtable**
 
 **Procedure**
+
 *Full Adder*:
 1.Open Quartus II and create a new project. 2.Use schematic design entry to draw the full adder circuit. 3.The circuit consists of XOR, AND, and OR gates. 4.Compile the design, verify its functionality through simulation. 5.Implement the design on the target device and program it.
 
@@ -79,8 +80,10 @@ endmodule
 */
 
 **RTL Schematic**
+
 *full adder*
 ![image](https://github.com/YASHWINISEC/FULL_ADDER_SUBTRACTOR/assets/139361633/6d52ca52-26a4-43e8-aa52-b207acff7e08)
+
 
 *full subtractor*
 ![image](https://github.com/YASHWINISEC/FULL_ADDER_SUBTRACTOR/assets/139361633/c67fed7b-592f-476a-ac5b-6d0615c67bda)
