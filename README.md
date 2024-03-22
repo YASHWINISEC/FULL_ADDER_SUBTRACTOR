@@ -39,17 +39,61 @@ Borrow out = A'Bin + A'B + BBin
 **Truthtable**
 
 **Procedure**
+*Full Adder*:
+1.Open Quartus II and create a new project. 2.Use schematic design entry to draw the full adder circuit. 3.The circuit consists of XOR, AND, and OR gates. 4.Compile the design, verify its functionality through simulation. 5.Implement the design on the target device and program it.
 
-Write the detailed procedure here
+*Full Subtractor*:
+1.Follow the same steps as for the full adder. 2.Draw the full subtractor circuit using schematic design. 3.The circuit includes XOR, AND, OR gates to perform subtraction. 4.Compile, simulate, implement, and program the design similarly to the full adder.
+
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+
+Developed by: YASHWINI M
+RegisterNumber: 212223230249
+
+**FULL ADDER**
+```
+module full_adder(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+wire w1,w2,w3,w4;       
+xor(w1,a,b);
+xor(sum,w1,cin);        
+and(w2,a,b);
+and(w3,b,cin);
+and(w4,cin,a);
+or(carry,w2,w3,w4);
+endmodule
+```
+**FULL SUBTRACTOR**
+```
+module full_subtracter(a,b,Bin,BO,DIFF);
+input a,b,Bin;
+output BO,DIFF;
+assign DIFF = a ^ b ^ Bin;
+  assign BO = (a & b) | ((a ^ b) & Bin);
+endmodule
+```
 */
 
 **RTL Schematic**
+*full adder*
+![image](https://github.com/YASHWINISEC/FULL_ADDER_SUBTRACTOR/assets/139361633/6d52ca52-26a4-43e8-aa52-b207acff7e08)
+
+*full subtractor*
+![image](https://github.com/YASHWINISEC/FULL_ADDER_SUBTRACTOR/assets/139361633/c67fed7b-592f-476a-ac5b-6d0615c67bda)
+
 
 **Output Timing Waveform**
+
+**FULL ADDER**
+![image](https://github.com/YASHWINISEC/FULL_ADDER_SUBTRACTOR/assets/139361633/6ddc42a7-3858-4e88-8886-ecdf8a507073)
+
+**FULL SUBTRACTOR**
+![image](https://github.com/YASHWINISEC/FULL_ADDER_SUBTRACTOR/assets/139361633/f69f1f6e-521c-4fbc-8d0a-068b972b81a9)
+
 
 **Result:**
 
